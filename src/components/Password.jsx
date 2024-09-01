@@ -26,7 +26,7 @@ const Password = () => {
   return (
     <div className="min-h-[400px] bg-white flex items-center justify-center text-black flex-col max-w-[600px] w-[96%] gap-4 rounded">
       <div className="flex flex-col max-w-full w-[96%]">
-        <label className="max-w-[300px] w-[99%]">Enter Name Here</label>
+        <label className="font-semibold text-lg">Enter Name Here</label>
         <input
           placeholder="Enter Name Here"
           type="text"
@@ -34,7 +34,7 @@ const Password = () => {
         />
       </div>
       <div className="flex flex-col max-w-full w-[96%]  relative">
-        <label>Enter Password Here</label>
+        <label className="font-semibold text-lg">Enter Password Here</label>
         <input
           placeholder="Enter Password Here"
           type={isOpen ? "text" : "password"}
@@ -42,12 +42,12 @@ const Password = () => {
         />
         {isOpen ? (
           <VscEyeClosed
-            className="absolute right-2 top-9 text-xl"
+            className="cursor-pointer absolute right-2 top-9 text-xl"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           />
         ) : (
           <IoIosEye
-            className="absolute right-2 top-9 text-xl"
+            className="cursor-pointer absolute right-2 top-9 text-xl"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           />
         )}
