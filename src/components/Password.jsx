@@ -23,6 +23,7 @@ const Password = () => {
       onClick: function () {}, // Callback after click
     }).showToast();
   }
+
   return (
     <div className="min-h-[400px] bg-white flex items-center justify-center text-black flex-col max-w-[600px] w-[96%] gap-4 rounded">
       <div className="flex flex-col max-w-full w-[96%]">
@@ -33,21 +34,21 @@ const Password = () => {
           className="h-[40px] border border-black rounded p-4"
         />
       </div>
-      <div className="flex flex-col max-w-full w-[96%]  relative">
+      <div className="flex flex-col max-w-full w-[96%] relative">
         <label className="font-semibold text-lg">Enter Password Here</label>
         <input
           placeholder="Enter Password Here"
           type={isOpen ? "text" : "password"}
-          className="h-[40px] border border-black rounded p-4 "
+          className="h-[40px] border border-black rounded p-4"
         />
         {isOpen ? (
           <VscEyeClosed
-            className="cursor-pointer absolute right-2 top-9 text-xl"
+            className="cursor-pointer absolute right-2 top-9 text-xl transition-opacity duration-300 opacity-100"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           />
         ) : (
           <IoIosEye
-            className="cursor-pointer absolute right-2 top-9 text-xl"
+            className="cursor-pointer absolute right-2 top-9 text-xl transition-opacity duration-300 opacity-100"
             onClick={() => setIsOpen((isOpen) => !isOpen)}
           />
         )}
